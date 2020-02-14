@@ -1,0 +1,5 @@
+  0%|          | 0/2 [00:00<?, ?it/s]  0%|          | 0/2 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "C10_merge_stacks.py", line 38, in <module>
+    df_dict = pd.read_excel(qpath + r'model/' + scenario + '/stacks.xlsx', sheet_name=None)
+NameError: name 'qpath' is not defined
