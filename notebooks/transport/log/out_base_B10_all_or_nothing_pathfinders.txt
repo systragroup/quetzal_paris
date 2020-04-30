@@ -1,2 +1,2 @@
 SQLalchemy is not installed. No support for SQL output.
-bus_speed = 4.377332978031675 m / s
+bus_speed = 4.357841458826808 m / s

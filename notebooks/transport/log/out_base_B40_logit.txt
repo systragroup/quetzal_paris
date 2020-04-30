@@ -8,10 +8,10 @@ path utilities rail 0.1 -> rail
 path utilities subway 0.1 -> subway
 path utilities tram 0.1 -> tram
 path utilities walk 0.01 -> walk
-mode utilities ['rail', 'bus', 'subway', 'tram'] 0.5 -> pt
+mode utilities ['subway', 'bus', 'rail', 'tram'] 0.5 -> pt
 mode utilities ['car', 'walk', 'pt'] 1.0 -> root
 mode probabilities root 1.0 -> ['car', 'walk', 'pt']
-mode probabilities pt 0.5 -> ['rail', 'bus', 'subway', 'tram']
+mode probabilities pt 0.5 -> ['subway', 'bus', 'rail', 'tram']
 path probabilities bus 0.1 -> bus
 path probabilities car 0.01 -> car
 path probabilities rail 0.1 -> rail
@@ -25,10 +25,10 @@ path utilities rail 0.1 -> rail
 path utilities subway 0.1 -> subway
 path utilities tram 0.1 -> tram
 path utilities walk 0.01 -> walk
-mode utilities ['rail', 'bus', 'subway', 'tram'] 0.5 -> pt
+mode utilities ['subway', 'bus', 'rail', 'tram'] 0.5 -> pt
 mode utilities ['car', 'walk', 'pt'] 1.0 -> root
 mode probabilities root 1.0 -> ['car', 'walk', 'pt']
-mode probabilities pt 0.5 -> ['rail', 'bus', 'subway', 'tram']
+mode probabilities pt 0.5 -> ['subway', 'bus', 'rail', 'tram']
 path probabilities bus 0.1 -> bus
 path probabilities car 0.01 -> car
 path probabilities rail 0.1 -> rail
