@@ -1,1 +1,2 @@
 SQLalchemy is not installed. No support for SQL output.
+Figure(1600x900)

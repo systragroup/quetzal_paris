@@ -1,13 +1,9 @@
 SQLalchemy is not installed. No support for SQL output.
 step: 0  moved = 100.0 %
 relgap = 0.0 %
-step: 1  moved = 44.8 %
-relgap = 23.7 %
-step: 2  moved = 26.3 %
-relgap = 3.5 %
-step: 3  moved = 37.9 %
-relgap = 1.1 %
-step: 4  moved = 14.9 %
-relgap = 1.7 %
+step: 1  moved = 40.7 %
+relgap = 3.8 %
+step: 2  moved = 39.5 %
+relgap = 0.9 %
 step: 0  moved = 100.0 %
 relgap = 0.0 %
