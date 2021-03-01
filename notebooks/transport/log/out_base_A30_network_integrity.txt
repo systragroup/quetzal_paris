@@ -1,6 +1,6 @@
 SQLalchemy is not installed. No support for SQL output.
 can not add prefixes on table:  footpaths
-dropped circular lines: ['100100194:194_1', '100100323:323_1', '100100388:388_1', '100100129:129_1', '100100150:150_1', '100100249:249_1', '100100152:152_1', '100100105:105_1', '100100290:290_1']
+dropped circular lines: ['100100152:152_1', '100100194:194_1', '100100249:249_1', '100100129:129_1', '100100290:290_1', '100100150:150_1', '100100105:105_1', '100100323:323_1', '100100388:388_1']
 passed: integrity_test_circular_lines
 passed: integrity_test_collision
 passed: integrity_test_dead_ends
@@ -9,8 +9,3 @@ passed: integrity_test_nodeset_consistency
 passed: integrity_test_road_network
 passed: integrity_test_road_nodeset_consistency
 passed: integrity_test_sequences
-could not change epsg for the following attributes: 
-['jsons']
-could not save attribute: missing_road_nodes
-could not save attribute: missing_nodes
-could not save attribute: orphan_nodes

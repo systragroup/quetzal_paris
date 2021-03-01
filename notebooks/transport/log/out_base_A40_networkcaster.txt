@@ -1,6 +1,2 @@
 SQLalchemy is not installed. No support for SQL output.
-could not save attribute: missing_nodes
-could not save attribute: orphan_nodes
-could not save attribute: missing_road_nodes
-could not save attribute: networkcaster
 Deprecated: replaced by analysis_lines
