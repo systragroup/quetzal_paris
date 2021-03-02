@@ -1,2 +1,0 @@
-Figure(1313.63x600)
-SQLalchemy is not installed. No support for SQL output.

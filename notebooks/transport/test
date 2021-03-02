@@ -1,0 +1,21 @@
+strict digraph  {
+    ratio = fill; 
+    node [style="filled,rounded" ,shape="record", fontname = "calibri", fontsize=24,];
+    edge[ fontname = "calibri", fontsize=24];
+    ranksep = "0.5";
+    rankdir="LR";
+    
+53;
+"100110009_9_1";
+143;
+"100110011_11_1";
+172;
+zone_70;
+zone_105;
+53 -> "100110009_9_1"  [label=""];
+"100110009_9_1" -> 143  [label=""];
+143 -> "100110011_11_1"  [label=""];
+"100110011_11_1" -> 172  [label=""];
+172 -> zone_105  [label=""];
+zone_70 -> 53  [label=""];
+}
