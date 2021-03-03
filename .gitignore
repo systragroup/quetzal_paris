@@ -4,4 +4,5 @@
 **.ipynb_checkpoints**
 
 model/
+notebooks/transport/log
 json/
