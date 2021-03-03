@@ -6,4 +6,9 @@ SET PATH=%PATH%;%USERPROFILE%\AppData\Local\continuum\Anaconda3\Scripts
 SET PATH=%PATH%;%USERPROFILE%\AppData\Local\continuum\Anaconda3\Library\mingw-w64\bin
 SET PATH=%PATH%;%USERPROFILE%\AppData\Local\continuum\Anaconda3\Library\usr\bin
 SET PATH=%PATH%;%USERPROFILE%\AppData\Local\continuum\Anaconda3\Library\bin
+SET PATH=%PATH%;%USERPROFILE%\Anaconda3\
+SET PATH=%PATH%;%USERPROFILE%\Anaconda3\Scripts
+SET PATH=%PATH%;%USERPROFILE%\Anaconda3\Library\mingw-w64\bin
+SET PATH=%PATH%;%USERPROFILE%\Anaconda3\Library\usr\bin
+SET PATH=%PATH%;%USERPROFILE%\Anaconda3\Library\bin
 jupyter-notebook.exe

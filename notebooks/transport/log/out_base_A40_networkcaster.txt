@@ -1,2 +1,0 @@
-SQLalchemy is not installed. No support for SQL output.
-Deprecated: replaced by analysis_lines
