@@ -1,0 +1,29 @@
+Broken Routes: ['1' '2' '3' '4' '5' '6' '7' '8' '9' '10' '11' '12' '13' '14' '3B' '7B'
+ 'T3B' 'T2' 'T3A' 'C' 'D' 'E' 'L' 'A' 'B']
+Broken Modes Combinaison: [{'bus', 'rail', 'tram', 'subway'}, {'bus'}, {'subway'}, {'tram'}, {'rail'}]
+11 + 11 = 22 < 0.6 * 110 splitting od_set
+13 + 12 = 25 < 0.6 * 110 splitting od_set
+8 + 5 = 13 < 0.6 * 107 splitting od_set
+0 + 0 = 0 >= 0.6 * 0 keeping od_set
+16 + 12 = 28 < 0.6 * 110 splitting od_set
+4 + 5 = 9 < 0.6 * 109 splitting od_set
+6 + 6 = 12 < 0.6 * 105 splitting od_set
+8 + 9 = 17 < 0.6 * 95 splitting od_set
+10 + 11 = 21 < 0.6 * 110 splitting od_set
+2 + 2 = 4 < 0.6 * 95 splitting od_set
+16 + 9 = 25 < 0.6 * 110 splitting od_set
+15 + 12 = 27 < 0.6 * 109 splitting od_set
+17 + 16 = 33 < 0.6 * 110 splitting od_set
+6 + 3 = 9 < 0.6 * 109 splitting od_set
+2 + 1 = 3 < 0.6 * 8 splitting od_set
+10 + 7 = 17 < 0.6 * 110 splitting od_set
+15 + 16 = 31 < 0.6 * 110 splitting od_set
+5 + 5 = 10 < 0.6 * 110 splitting od_set
+9 + 7 = 16 < 0.6 * 99 splitting od_set
+1 + 1 = 2 < 0.6 * 57 splitting od_set
+19 + 17 = 36 < 0.6 * 110 splitting od_set
+11 + 10 = 21 < 0.6 * 110 splitting od_set
+10 + 10 = 20 < 0.6 * 110 splitting od_set
+16 + 14 = 30 < 0.6 * 110 splitting od_set
+0 + 0 = 0 >= 0.6 * 0 keeping od_set
+50430

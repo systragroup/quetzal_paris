@@ -1,0 +1,9 @@
+segment     root  car_owner  pt_captive
+route_type                             
+bus         -0.0    -0.3960     -0.0495
+car         -0.0    -0.3300     -0.0000
+tram        -0.0    -0.0000     -0.0000
+root        -0.0    -0.0000     -0.0000
+rail        -0.0    -0.1485     -0.0165
+subway      -0.0    -0.0330     -0.0495
+walk        -0.0    -0.0000     -0.0000

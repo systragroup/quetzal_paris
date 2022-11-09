@@ -1,0 +1,4 @@
+  File "B13_optimal_strategy.py", line 134
+    zone 72 - avenue foch/16ieme arrondissement
+         ^
+SyntaxError: invalid syntax

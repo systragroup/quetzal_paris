@@ -1,0 +1,20 @@
+vdf not found in road_links columns. Values set to 'default_bpr'
+alpha not found in road_links columns. Values set to 0.15
+beta not found in road_links columns. Values set to 4
+limit not found in road_links columns. Values set to 20
+penalty not found in road_links columns. Values set to 0
+iteration | Phi |  Rel Gap (%)
+0 0.1609 35.085
+1 0.15 16.717
+2 0.1406 7.349
+3 0.1406 3.349
+4 0.1797 1.655
+5 0.4672 0.935
+6 0.6844 0.5
+7 0.8 0.172
+8 0.8 0.028
+9 0.1 0.272
+10 0.4094 0.204
+11 0.4234 0.091
+12 0.8 0.043
+13 0.4547 0.005

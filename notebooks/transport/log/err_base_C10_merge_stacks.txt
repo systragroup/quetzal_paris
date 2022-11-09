@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "C10_merge_stacks.py", line 62, in <module>
+    main()
+  File "C10_merge_stacks.py", line 15, in main
+    parameter_frame = pd.read_excel(r'../../inputs/parameters.xlsx').set_index(['category','parameter'])
+  File "c:\Users\qchasserieau\Anaconda3\envs\quetzal_env\lib\site-packages\pandas\util\_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\qchasserieau\Anaconda3\envs\quetzal_env\lib\site-packages\pandas\core\frame.py", line 5451, in set_index
+    raise KeyError(f"None of {missing} are in the columns")
+KeyError: "None of ['category', 'parameter'] are in the columns"

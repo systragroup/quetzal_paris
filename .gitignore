@@ -2,6 +2,3 @@
 *.pyc
 **.cache**
 **.ipynb_checkpoints**
-
-notebooks/transport/log/
-json/
