@@ -3,6 +3,5 @@
 **.cache**
 **.ipynb_checkpoints**
 
-model/
-notebooks/transport/log
+notebooks/transport/log/
 json/
