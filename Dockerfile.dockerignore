@@ -1,0 +1,8 @@
+**__pycache__**
+*.pyc
+**.cache**
+**.ipynb_checkpoints**
+**.DS_store**
+quetzal_paris/model
+quetzal_paris/outputs
+quetzal/quetzal_env

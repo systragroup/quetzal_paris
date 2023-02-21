@@ -1,1 +1,17 @@
-quetzal v1.1.0
+contextily
+geojson
+geopandas
+geopy
+gtfs-kit
+jupyter
+numba
+openpyxl
+osmnx
+ray
+scipy
+simpledbf
+scikit-learn
+tables
+tqdm
+xlrd
+tk
