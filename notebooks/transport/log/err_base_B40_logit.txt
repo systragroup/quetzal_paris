@@ -1,31 +1,0 @@
-  0%|          | 0/3 [00:00<?, ?it/s]volumes: 100%|██████████| 3/3 [00:00<00:00, 442.05it/s]
-  0%|          | 0/32 [00:00<?, ?it/s]epsg:  25%|██▌       | 8/32 [00:00<00:00, 79.84it/s]networkcaster_road_access:  50%|█████     | 16/32 [00:01<00:01, 10.11it/s]pt_los:  69%|██████▉   | 22/32 [00:01<00:00, 13.64it/s]                   road_to_transit:  81%|████████▏ | 26/32 [00:03<00:00,  6.51it/s]zone_to_transit: 100%|██████████| 32/32 [00:03<00:00, 10.37it/s]
-  0%|          | 0/33 [00:00<?, ?it/s]disaggregated_nodes:  24%|██▍       | 8/33 [00:00<00:00, 73.82it/s]networkcaster_neighbors:  48%|████▊     | 16/33 [00:00<00:01, 15.69it/s]node_parenthood:  61%|██████    | 20/33 [00:01<00:00, 16.41it/s]        road_links:  76%|███████▌  | 25/33 [00:01<00:00, 19.45it/s]     zone_to_transit: 100%|██████████| 33/33 [00:01<00:00, 24.10it/s]
-path_analysis:   0%|          | 0/50430 [00:00<?, ?it/s]path_analysis:   6%|▌         | 2868/50430 [00:00<00:03, 12276.64it/s]path_analysis:  17%|█▋        | 8483/50430 [00:00<00:01, 28886.74it/s]path_analysis:  28%|██▊       | 13883/50430 [00:00<00:00, 37619.41it/s]path_analysis:  36%|███▋      | 18396/50430 [00:00<00:00, 39538.95it/s]path_analysis:  46%|████▌     | 23111/50430 [00:00<00:00, 41902.20it/s]path_analysis:  55%|█████▍    | 27640/50430 [00:00<00:00, 24790.86it/s]path_analysis:  65%|██████▍   | 32765/50430 [00:01<00:00, 30206.14it/s]path_analysis:  80%|███████▉  | 40131/50430 [00:01<00:00, 40037.15it/s]path_analysis:  90%|████████▉ | 45195/50430 [00:01<00:00, 42357.78it/s]path_analysis: 100%|██████████| 50430/50430 [00:01<00:00, 36654.14it/s]
-  0%|          | 0/2 [00:00<?, ?it/s]100%|██████████| 2/2 [00:00<00:00, 36.21it/s]
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:00<00:01,  5.04it/s] 20%|██        | 2/10 [00:00<00:01,  5.38it/s] 30%|███       | 3/10 [00:00<00:01,  5.46it/s] 40%|████      | 4/10 [00:00<00:01,  5.22it/s] 50%|█████     | 5/10 [00:00<00:00,  5.13it/s] 60%|██████    | 6/10 [00:01<00:00,  5.07it/s] 70%|███████   | 7/10 [00:01<00:00,  5.09it/s] 80%|████████  | 8/10 [00:01<00:00,  5.20it/s] 90%|█████████ | 9/10 [00:01<00:00,  5.23it/s]100%|██████████| 10/10 [00:01<00:00,  5.50it/s]100%|██████████| 10/10 [00:01<00:00,  5.29it/s]
-Traceback (most recent call last):
-  File "c:\Users\qchasserieau\Anaconda3\envs\quetzal_env\lib\site-packages\pandas\core\indexes\base.py", line 3361, in get_loc
-    return self._engine.get_loc(casted_key)
-  File "pandas\_libs\index.pyx", line 76, in pandas._libs.index.IndexEngine.get_loc
-  File "pandas\_libs\index.pyx", line 108, in pandas._libs.index.IndexEngine.get_loc
-  File "pandas\_libs\hashtable_class_helper.pxi", line 5198, in pandas._libs.hashtable.PyObjectHashTable.get_item
-  File "pandas\_libs\hashtable_class_helper.pxi", line 5206, in pandas._libs.hashtable.PyObjectHashTable.get_item
-KeyError: 'in_vehicle_length'
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "B40_logit.py", line 354, in <module>
-    main()
-  File "B40_logit.py", line 219, in main
-    sm.summary_aggregated_path_average(inplace=True, pt_route_types=['subway', 'bus', 'tram', 'rail'])
-  File "c:\Users\qchasserieau\quetzal_quartz\quetzal_paris\notebooks\transport\../../../quetzal\quetzal\model\summarymodel.py", line 140, in summary_aggregated_path_average
-    stack = self.summary_path_sum()
-  File "c:\Users\qchasserieau\quetzal_quartz\quetzal_paris\notebooks\transport\../../../quetzal\quetzal\model\summarymodel.py", line 73, in summary_path_sum
-    df[c] = df[c] * df['volume']
-  File "c:\Users\qchasserieau\Anaconda3\envs\quetzal_env\lib\site-packages\pandas\core\frame.py", line 3458, in __getitem__
-    indexer = self.columns.get_loc(key)
-  File "c:\Users\qchasserieau\Anaconda3\envs\quetzal_env\lib\site-packages\pandas\core\indexes\base.py", line 3363, in get_loc
-    raise KeyError(key) from err
-KeyError: 'in_vehicle_length'
