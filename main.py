@@ -17,12 +17,12 @@ def handler(event, context):
     my_env = os.environ.copy()
     my_env['PYTHONPATH'] = os.pathsep.join(sys.path)
     process = Popen(command_list, stdout=PIPE, stderr=STDOUT, env=my_env, cwd=cwd)
-    process.wait()
+    process.wait(timeout=500)
 
-    content = process.stdout.read()
+    content = process.stdout.read().decode("utf-8")
     print(content)
 
     if 'Error' in content and "end_of_notebook" not in content:
-        return 1
+        raise RuntimeError("Error on execution")
 
-    return 0
+    return event
