@@ -16,3 +16,4 @@ tqdm
 xlrd
 tk
 s3fs
+boto3
