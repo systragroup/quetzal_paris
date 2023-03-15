@@ -61,7 +61,7 @@ def handler(event, context):
     # Move (and download) model data and inputs to ephemeral storage
     clean_folder() # Clean ephemeral storage
     shutil.copytree('./inputs', '/tmp/inputs')
-    download_s3_folder(bucket_name, 'dev')
+    download_s3_folder(bucket_name, event['scenario_path_S3'])
     
     notebook = event['notebook_path']
     arg = json.dumps(event['launcher_arg'])
@@ -84,7 +84,9 @@ def handler(event, context):
         raise RuntimeError("Error on execution")
     
     os.remove(file)
+    if os.path.exists('/tmp/quenedi.json'):
+        os.remove('/tmp/quenedi.json')
     shutil.rmtree('/tmp/inputs')
-    upload_s3_folder(bucket_name, 'dev')
+    upload_s3_folder(bucket_name, event['scenario_path_S3'])
 
     return event
