@@ -1,0 +1,22 @@
+{
+    "network_paths": {
+        "read_links_path": [
+            "inputs/gtfs/"
+        ],
+        "read_rlinks_path": [
+            "inputs/road/"
+        ],
+        "write_links_path": [
+            "inputs/gtfs/"
+        ],
+        "write_rlinks_path": [
+            "inputs/road/"
+        ]
+    },
+    "output_paths": [
+        "outputs/"
+    ],
+    "protected": [
+        "base"
+    ]
+}

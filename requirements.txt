@@ -10,6 +10,7 @@ osmnx
 ray
 scipy
 simpledbf
+simplejson
 scikit-learn
 tables
 tqdm
