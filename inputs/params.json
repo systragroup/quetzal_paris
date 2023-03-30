@@ -1,0 +1,293 @@
+﻿[{
+	"category": "preparation_footpaths",
+	"params": [{
+			"text": "max_length",
+			"value": 3000.0,
+			"type": "Number",
+			"units": "m",
+			"hint": "Longueur maximale des liens de marche de type footpath",
+			"rules": [
+				"required"
+			],
+			"name": "preparation_footpaths_max_length"
+		},
+		{
+			"text": "speed",
+			"value": 3.0,
+			"type": "Number",
+			"units": "km/h",
+			"hint": "Vitesse de marche",
+			"rules": [
+				"required"
+			],
+			"name": "preparation_footpaths_speed"
+		},
+		{
+			"text": "n_clusters",
+			"value": 3000,
+			"type": "Number",
+			"units": "-",
+			"hint": "Nombre de cluster pour opimiser le calcul des footpaths",
+			"rules": [
+				"required"
+			],
+			"name": "preparation_footpaths_n_clusters"
+		}
+	]
+}, {
+	"category": "preparation_ntlegs",
+	"params": [{
+			"text": "n_ntlegs",
+			"value": 5,
+			"type": "Number",
+			"units": "-",
+			"hint": "Nombre d'accès à la route par centroide et nœuds",
+			"rules": [
+				"required"
+			],
+			"name": "preparation_ntlegs_n_ntlegs"
+		},
+		{
+			"text": "max_ntleg_length",
+			"value": 5000.0,
+			"type": "Number",
+			"units": "m",
+			"hint": "Longueur maximale des liens de type ntlegs",
+			"rules": [
+				"required"
+			],
+			"name": "preparation_ntlegs_max_ntleg_length"
+		},
+		{
+			"text": "long_leg_speed",
+			"value": 7.0,
+			"type": "Number",
+			"units": "km/h",
+			"hint": "Vitesses de parcours des ntleg après treshold",
+			"rules": [
+				"required"
+			],
+			"name": "preparation_ntlegs_long_leg_speed"
+		},
+		{
+			"text": "short_leg_speed",
+			"value": 3.0,
+			"type": "Number",
+			"units": "km/h",
+			"hint": "Vitesses de parcours des ntleg avant treshold",
+			"rules": [
+				"required"
+			],
+			"name": "preparation_ntlegs_short_leg_speed"
+		},
+		{
+			"text": "threshold",
+			"value": 500.0,
+			"type": "Number",
+			"units": "m",
+			"hint": "Séparation souple entre short et long ntlegs",
+			"rules": [
+				"required"
+			],
+			"name": "preparation_ntlegs_threshold"
+		}
+	]
+}, {
+	"category": "preparation_logit",
+	"params": [{
+			"text": "time",
+			"value": -0.00055,
+			"type": "Number",
+			"units": "min/pt",
+			"hint": "Valeur utilitaire du temps (Pour le calcul du facteur multiplication du temps de la fonction d'utilité)",
+			"rules": [
+				"required"
+			],
+			"name": "preparation_logit_time"
+		},
+		{
+			"text": "price",
+			"value": -1.0,
+			"type": "Number",
+			"units": "$/hr",
+			"hint": "Valeur monétaire du temps (Pour le calcul du facteur multiplication du coût de la fonction d'utilité)",
+			"rules": [
+				"required"
+			],
+			"name": "preparation_logit_price"
+		},
+		{
+			"text": "transfers",
+			"value": -0.25,
+			"type": "Number",
+			"units": "min/transfer",
+			"hint": "Coefficient de pénalité de transfert",
+			"rules": [
+				"required"
+			],
+			"name": "preparation_logit_transfers"
+		},
+		{
+			"text": "mode",
+			"value": 1.0,
+			"type": "Number",
+			"units": "-",
+			"hint": "Facteur multiplicatif de l'utilité associé au mode",
+			"rules": [
+				"required"
+			],
+			"name": "preparation_logit_mode"
+		},
+		{
+			"text": "pt_mode",
+			"value": 0.5,
+			"type": "Number",
+			"units": "-",
+			"hint": "Coefficient du logit des modes PT",
+			"rules": [
+				"required"
+			],
+			"name": "preparation_logit_pt_mode"
+		},
+		{
+			"text": "pt_path",
+			"value": 0.1,
+			"type": "Number",
+			"units": "-",
+			"hint": "Coefficient du logit du nœud PT",
+			"rules": [
+				"required"
+			],
+			"name": "preparation_logit_pt_path"
+		}
+	]
+}, {
+	"category": "car_owner",
+	"params": [{
+			"text": "walk",
+			"value": 0.0,
+			"type": "Number",
+			"units": "min",
+			"hint": "Constante modale",
+			"rules": [
+				"required"
+			],
+			"name": "car_owner_walk"
+		},
+		{
+			"text": "bus",
+			"value": 12.0,
+			"type": "Number",
+			"units": "min",
+			"hint": "Constante modale",
+			"rules": [
+				"required"
+			],
+			"name": "car_owner_bus"
+		},
+		{
+			"text": "subway",
+			"value": 1.0,
+			"type": "Number",
+			"units": "min",
+			"hint": "Constante modale",
+			"rules": [
+				"required"
+			],
+			"name": "car_owner_subway"
+		},
+		{
+			"text": "rail",
+			"value": 4.5,
+			"type": "Number",
+			"units": "min",
+			"hint": "Constante modale",
+			"rules": [
+				"required"
+			],
+			"name": "car_owner_rail"
+		},
+		{
+			"text": "car",
+			"value": 10.0,
+			"type": "Number",
+			"units": "min",
+			"hint": "Constante modale",
+			"rules": [
+				"required"
+			],
+			"name": "car_owner_car"
+		}
+	]
+}, {
+	"category": "pt_captive",
+	"params": [{
+			"text": "walk",
+			"value": 0.0,
+			"type": "Number",
+			"units": "min",
+			"hint": "Constante modale",
+			"rules": [
+				"required"
+			],
+			"name": "pt_captive_walk"
+		},
+		{
+			"text": "bus",
+			"value": 1.5,
+			"type": "Number",
+			"units": "min",
+			"hint": "Constante modale",
+			"rules": [
+				"required"
+			],
+			"name": "pt_captive_bus"
+		},
+		{
+			"text": "subway",
+			"value": 1.5,
+			"type": "Number",
+			"units": "min",
+			"hint": "Constante modale",
+			"rules": [
+				"required"
+			],
+			"name": "pt_captive_subway"
+		},
+		{
+			"text": "rail",
+			"value": 0.5,
+			"type": "Number",
+			"units": "min",
+			"hint": "Constante modale",
+			"rules": [
+				"required"
+			],
+			"name": "pt_captive_rail"
+		},
+		{
+			"text": "car",
+			"value": 0.0,
+			"type": "Number",
+			"units": "min",
+			"hint": "Constante modale",
+			"rules": [
+				"required"
+			],
+			"name": "pt_captive_car"
+		}
+	]
+}, {
+	"category": "analysis_mode_utility",
+	"params": [{
+		"text": "how",
+		"value": "max",
+		"type": "String",
+		"items": ["main", "max", "min", "mean", "sum"],
+		"hint": "Méthode de calcul de la constante modale",
+		"rules": [
+			"required"
+		],
+		"name": "analysis_mode_utility_how"
+	}]
+}]

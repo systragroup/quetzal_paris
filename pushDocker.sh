@@ -2,7 +2,7 @@
 
 # *******************************************************
 # Ce script permet de mettre a jour le docker sur
-# le repo ECR d'AWS. Il NE MET PAS a jour la fonction Lambda
+# le repo ECR d'AWS.
 #*******************************************************
 cd ..
 
@@ -11,7 +11,9 @@ function_name=$name
 model_dir=quetzal_paris
 
 #ask user for a tag TODO use commit of model
-TAG=dev
+#ask user for a tag
+echo Enter a docker TAG:
+read TAG
 
 #Build docker image
 docker build -t $name:$TAG -f $model_dir/Dockerfile .
