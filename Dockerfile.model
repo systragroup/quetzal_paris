@@ -1,9 +1,0 @@
-# docker build need to be run from folder containing model and quetzal library
-FROM 142023388927.dkr.ecr.ca-central-1.amazonaws.com/quetzal-paris:latest
-
-# Copy model src code
-COPY ./quetzal_paris/main.py ${LAMBDA_TASK_ROOT}
-COPY ./quetzal_paris ${LAMBDA_TASK_ROOT}
-
-# Entrypoint
-CMD ["main.handler"]
