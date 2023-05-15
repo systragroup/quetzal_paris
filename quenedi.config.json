@@ -1,21 +1,14 @@
 {
     "network_paths": {
-        "read_links_path": [
-            "inputs/gtfs/"
-        ],
-        "read_rlinks_path": [
-            "inputs/road/"
-        ],
-        "write_links_path": [
-            "inputs/gtfs/"
-        ],
-        "write_rlinks_path": [
-            "inputs/road/"
-        ]
+        "links": "inputs/gtfs/links.geojson",
+        "nodes": "inputs/gtfs/nodes.geojson",
+        "rlinks": "inputs/road/road_links.geojson",
+        "rnodes": "inputs/road/road_nodes.geojson"
     },
     "output_paths": [
         "outputs/"
     ],
+    "parameters_path":"inputs/params.json",
     "protected": [
         "base"
     ]

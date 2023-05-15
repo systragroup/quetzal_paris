@@ -1,0 +1,230 @@
+{
+    "StartAt": "Networks Integrity",
+    "States": {
+      "Networks Integrity": {
+        "Type": "Task",
+        "Resource": "arn:aws:states:::lambda:invoke",
+        "OutputPath": "$.Payload",
+        "Parameters": {
+          "Payload": {
+            "notebook_path": "notebooks/transport/A30_network_integrity.ipynb",
+            "scenario_path_S3.$": "$.scenario_path_S3",
+            "launcher_arg.$": "$.launcher_arg",
+            "metadata.$": "$.metadata"
+          },
+          "FunctionName": "arn:aws:lambda:ca-central-1:142023388927:function:quetzal-paris:$LATEST"
+        },
+        "Retry": [
+          {
+            "ErrorEquals": [
+              "Lambda.ServiceException",
+              "Lambda.AWSLambdaException",
+              "Lambda.SdkClientException",
+              "Lambda.TooManyRequestsException"
+            ],
+            "IntervalSeconds": 2,
+            "MaxAttempts": 6,
+            "BackoffRate": 2
+          }
+        ],
+        "Next": "Networkcaster"
+      },
+      "Networkcaster": {
+        "Type": "Task",
+        "Resource": "arn:aws:states:::lambda:invoke",
+        "OutputPath": "$.Payload",
+        "Parameters": {
+          "Payload": {
+            "notebook_path": "notebooks/transport/A40_networkcaster.ipynb",
+            "scenario_path_S3.$": "$.scenario_path_S3",
+            "launcher_arg.$": "$.launcher_arg",
+            "metadata.$": "$.metadata"
+          },
+          "FunctionName": "arn:aws:lambda:ca-central-1:142023388927:function:quetzal-paris:$LATEST"
+        },
+        "Retry": [
+          {
+            "ErrorEquals": [
+              "Lambda.ServiceException",
+              "Lambda.AWSLambdaException",
+              "Lambda.SdkClientException",
+              "Lambda.TooManyRequestsException"
+            ],
+            "IntervalSeconds": 2,
+            "MaxAttempts": 6,
+            "BackoffRate": 2
+          }
+        ],
+        "Next": "Walkmodel"
+      },
+      "Walkmodel": {
+        "Type": "Task",
+        "Resource": "arn:aws:states:::lambda:invoke",
+        "OutputPath": "$.Payload",
+        "Parameters": {
+          "FunctionName": "arn:aws:lambda:ca-central-1:142023388927:function:quetzal-paris:$LATEST",
+          "Payload": {
+            "notebook_path": "notebooks/transport/A50_walkmodel.ipynb",
+            "scenario_path_S3.$": "$.scenario_path_S3",
+            "launcher_arg.$": "$.launcher_arg",
+            "metadata.$": "$.metadata"
+          }
+        },
+        "Retry": [
+          {
+            "ErrorEquals": [
+              "Lambda.ServiceException",
+              "Lambda.AWSLambdaException",
+              "Lambda.SdkClientException",
+              "Lambda.TooManyRequestsException"
+            ],
+            "IntervalSeconds": 2,
+            "MaxAttempts": 6,
+            "BackoffRate": 2
+          }
+        ],
+        "Next": "AON_pathfinder"
+      },
+      "AON_pathfinder": {
+        "Type": "Task",
+        "Resource": "arn:aws:states:::lambda:invoke",
+        "OutputPath": "$.Payload",
+        "Parameters": {
+          "FunctionName": "arn:aws:lambda:ca-central-1:142023388927:function:quetzal-paris:$LATEST",
+          "Payload": {
+            "notebook_path": "notebooks/transport/B10_all_or_nothing_pathfinders.ipynb",
+            "scenario_path_S3.$": "$.scenario_path_S3",
+            "launcher_arg.$": "$.launcher_arg",
+            "metadata.$": "$.metadata"
+          }
+        },
+        "Retry": [
+          {
+            "ErrorEquals": [
+              "Lambda.ServiceException",
+              "Lambda.AWSLambdaException",
+              "Lambda.SdkClientException",
+              "Lambda.TooManyRequestsException"
+            ],
+            "IntervalSeconds": 2,
+            "MaxAttempts": 6,
+            "BackoffRate": 2
+          }
+        ],
+        "Next": "Generation Distribution"
+      },
+      "Generation Distribution": {
+        "Type": "Task",
+        "Resource": "arn:aws:states:::lambda:invoke",
+        "OutputPath": "$.Payload",
+        "Parameters": {
+          "FunctionName": "arn:aws:lambda:ca-central-1:142023388927:function:quetzal-paris:$LATEST",
+          "Payload": {
+            "notebook_path": "notebooks/transport/B11_generation_distribution.ipynb",
+            "scenario_path_S3.$": "$.scenario_path_S3",
+            "launcher_arg.$": "$.launcher_arg",
+            "metadata.$": "$.metadata"
+          }
+        },
+        "Retry": [
+          {
+            "ErrorEquals": [
+              "Lambda.ServiceException",
+              "Lambda.AWSLambdaException",
+              "Lambda.SdkClientException",
+              "Lambda.TooManyRequestsException"
+            ],
+            "IntervalSeconds": 2,
+            "MaxAttempts": 6,
+            "BackoffRate": 2
+          }
+        ],
+        "Next": "Pruning Pathfinder"
+      },
+      "Pruning Pathfinder": {
+        "Type": "Task",
+        "Resource": "arn:aws:states:::lambda:invoke",
+        "OutputPath": "$.Payload",
+        "Parameters": {
+          "FunctionName": "arn:aws:lambda:ca-central-1:142023388927:function:quetzal-paris:$LATEST",
+          "Payload": {
+            "notebook_path": "notebooks/transport/B12_pruning_PT_pathfinder.ipynb",
+            "scenario_path_S3.$": "$.scenario_path_S3",
+            "launcher_arg.$": "$.launcher_arg",
+            "metadata.$": "$.metadata"
+          }
+        },
+        "Retry": [
+          {
+            "ErrorEquals": [
+              "Lambda.ServiceException",
+              "Lambda.AWSLambdaException",
+              "Lambda.SdkClientException",
+              "Lambda.TooManyRequestsException"
+            ],
+            "IntervalSeconds": 2,
+            "MaxAttempts": 6,
+            "BackoffRate": 2
+          }
+        ],
+        "Next": "Road Pathfinder"
+      },
+      "Road Pathfinder": {
+        "Type": "Task",
+        "Resource": "arn:aws:states:::lambda:invoke",
+        "OutputPath": "$.Payload",
+        "Parameters": {
+          "FunctionName": "arn:aws:lambda:ca-central-1:142023388927:function:quetzal-paris:$LATEST",
+          "Payload": {
+            "notebook_path": "notebooks/transport/B31_road_pathfinder.ipynb",
+            "scenario_path_S3.$": "$.scenario_path_S3",
+            "launcher_arg.$": "$.launcher_arg",
+            "metadata.$": "$.metadata"
+          }
+        },
+        "Retry": [
+          {
+            "ErrorEquals": [
+              "Lambda.ServiceException",
+              "Lambda.AWSLambdaException",
+              "Lambda.SdkClientException",
+              "Lambda.TooManyRequestsException"
+            ],
+            "IntervalSeconds": 2,
+            "MaxAttempts": 6,
+            "BackoffRate": 2
+          }
+        ],
+        "Next": "Logit"
+      },
+      "Logit": {
+        "Type": "Task",
+        "Resource": "arn:aws:states:::lambda:invoke",
+        "OutputPath": "$.Payload",
+        "Parameters": {
+          "FunctionName": "arn:aws:lambda:ca-central-1:142023388927:function:quetzal-paris:$LATEST",
+          "Payload": {
+            "notebook_path": "notebooks/transport/B40_logit.ipynb",
+            "scenario_path_S3.$": "$.scenario_path_S3",
+            "launcher_arg.$": "$.launcher_arg",
+            "metadata.$": "$.metadata"
+          }
+        },
+        "Retry": [
+          {
+            "ErrorEquals": [
+              "Lambda.ServiceException",
+              "Lambda.AWSLambdaException",
+              "Lambda.SdkClientException",
+              "Lambda.TooManyRequestsException"
+            ],
+            "IntervalSeconds": 2,
+            "MaxAttempts": 6,
+            "BackoffRate": 2
+          }
+        ],
+        "End": true
+      }
+    },
+    "Comment": "Quetzal Paris model"
+  }
