@@ -1,21 +1,36 @@
 strict digraph  {
-    ratio = fill; 
-    node [style="filled,rounded" ,shape="record", fontname = "calibri", fontsize=24,];
-    edge[ fontname = "calibri", fontsize=24];
-    ranksep = "0.5";
-    rankdir="LR";
-    
-53;
-"100110009_9_1";
-143;
-"100110011_11_1";
-172;
-zone_70;
-zone_105;
-53 -> "100110009_9_1"  [label=""];
-"100110009_9_1" -> 143  [label=""];
-143 -> "100110011_11_1"  [label=""];
-"100110011_11_1" -> 172  [label=""];
-172 -> zone_105  [label=""];
-zone_70 -> 53  [label=""];
+ratio = fill; 
+node [style="filled,rounded" ,shape="record", fontname = "calibri", fontsize=24,];
+edge[ fontname = "calibri", fontsize=24];
+ranksep = "0.5";
+rankdir="LR";
+
+stop_area_167;
+"100110001_1_0";
+stop_area_161;
+"100110004_4_1";
+stop_area_274;
+"100110005_5_1";
+stop_area_265;
+"100110107_7B_1";
+stop_area_465;
+"800_D_1";
+"810_B_0";
+stop_area_648;
+zone_100;
+zone_0;
+stop_area_167 -> "100110001_1_0"  [label=""];
+"100110001_1_0" -> stop_area_161  [label=""];
+stop_area_161 -> "100110004_4_1"  [label=""];
+"100110004_4_1" -> stop_area_465  [label=""];
+stop_area_274 -> "100110005_5_1"  [label=""];
+"100110005_5_1" -> stop_area_265  [label=""];
+stop_area_265 -> "100110107_7B_1"  [label=""];
+"100110107_7B_1" -> stop_area_648  [label=""];
+stop_area_465 -> "800_D_1"  [label="p=0.55"];
+stop_area_465 -> "810_B_0"  [label="p=0.45"];
+"800_D_1" -> stop_area_274  [label=""];
+"810_B_0" -> stop_area_274  [label=""];
+stop_area_648 -> zone_100  [label=""];
+zone_0 -> stop_area_167  [label=""];
 }

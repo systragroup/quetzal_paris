@@ -3,6 +3,6 @@
 **.cache**
 **.ipynb_checkpoints**
 
-model/
+models/
 notebooks/transport/log
 json/
